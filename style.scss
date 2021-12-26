@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+html {
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #111;
+}
+
+h1 {
+    color: #fff;
+}
+.container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(30, 13px);
+    grid-template-rows: repeat(40, 13px);
+    gap: 2px;
+    .square {
+        background-color: #333;
+        box-shadow: 0 0 2px #1d1d1d;
+        height: 13px;
+        width: 13px;
+        display: block;
+        transition: background-color 2s;
+    }
+    .square:hover {
+        transition: background-color 0s;
+    }
+}
